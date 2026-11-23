@@ -1,0 +1,22 @@
+<time-signature> ::= <time-12> | <time-24>
+<time-12> ::= <numeric-time-12><period>
+<numeric-time-12> ::= <no-leading-zero-hour-12> 
+										| <hour-12>:<minutes>
+<no-leading-zero-hour-12> ::= <nonzero-digit> 
+														| "1"<zero-to-two>
+<hour-12> ::= <nonzero-digit>
+						| "0"<nonzero-digit> 
+						| "1"<zero-to-two>
+<time-24> ::= <hour-24>:<minutes>
+<hour-24> ::= <digit>
+						| <zero-to-one><digit>
+						| "2"<zero-to-three>
+<minutes> ::= <zero-to-five><digit>
+<zero-to-one> ::= "0" | "1"
+<zero-to-two> ::= "0" | "1" | "2"
+<zero-to-three> ::= "0" | "1" | "2" | "3"
+<zero-to-five> ::= "0" | "1" | "2" | "3" | "4" | "5"
+<nonzero-digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<digit> ::= "0" | <nonzero-digit>
+<period> ::= "am" | "pm"
+

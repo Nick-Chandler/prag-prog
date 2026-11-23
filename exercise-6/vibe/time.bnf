@@ -1,0 +1,21 @@
+<time>          ::= <hour12> <ampm>
+                  | <hour12> ":" <minute> <ampm>
+                  | <hour24> ":" <minute>
+
+<ampm>          ::= "am" | "pm"
+
+<hour12>        ::= <nonzero-digit>
+                  | "1" <digit0-2>
+
+<hour24>        ::= <digit>
+                  | <digit0-1> <digit>
+                  | "2" <digit0-3>
+
+<minute>        ::= <digit0-5> <digit>
+
+<digit>         ::= "0" | <nonzero-digit>
+<nonzero-digit> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<digit0-1>      ::= "0" | "1"
+<digit0-2>      ::= "0" | "1" | "2"
+<digit0-3>      ::= "0" | "1" | "2" | "3"
+<digit0-5>      ::= "0" | "1" | "2" | "3" | "4" | "5"
