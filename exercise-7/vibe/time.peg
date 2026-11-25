@@ -1,0 +1,10 @@
+time         = time12_long / time12_short / time24
+
+time12_long  = hour12 ":" minute ampm
+time12_short = hour12 ampm
+time24       = hour24 ":" minute
+
+hour12       = ~"1[0-2]" / ~"[1-9]"
+hour24       = ~"2[0-3]" / ~"[01]?[0-9]"
+minute       = ~"[0-5][0-9]"
+ampm         = "am" / "pm"

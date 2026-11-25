@@ -1,0 +1,11 @@
+time = time_12 / time_24
+
+time_12 = hour_12 minutes_part? period
+time_24 = hour_24 minutes_part
+
+hour_12 = ~r"1[0-2]|0?[1-9]"
+hour_24 = ~r"2[0-3]|1[0-9]|0?[0-9]"
+
+minutes_part = ":" minutes
+minutes = ~r"[0-5][0-9]"
+period = "am" / "pm"
